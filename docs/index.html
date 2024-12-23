@@ -1,0 +1,995 @@
+<!-- Table of Contents -->
+<!-- 
+1. HTML Document Structure
+   1.1 Doctype Declaration
+   1.2 Head Section
+       1.2.1 Title
+       1.2.2 Metadata
+       1.2.3 Stylesheets and Scripts
+   1.3 Body Section
+2. Header Section
+   2.1 Logo
+   2.2 Search Bar
+   2.3 Navigation Menu
+3. Featured Categories Section
+   3.1 Section Heading
+   3.2 Category Cards
+4. Trending Products Section
+   4.1 Section Heading
+   4.2 Previous Button
+   4.3 Product Carousel
+       4.3.1 Product Cards
+   4.4 Next Button
+5. Popular Picks Section
+   5.1 Section Heading
+   5.2 Previous Button
+   5.3 Product Carousel
+       5.3.1 Product Cards
+   5.4 Next Button
+6. Limited Offer Section
+   6.1 Section Heading
+   6.2 Product Display
+       6.2.1 Product Cards
+   6.3 Call-to-Action Buttons
+7. Smart Watches Section
+   7.1 Section Heading
+   7.2 Previous Button
+   7.3 Product Carousel
+       7.3.1 Product Cards
+   7.4 Next Button
+8. Software Section
+   8.1 Section Heading
+   8.2 Previous Button
+   8.3 Product Carousel
+       8.3.1 Product Cards
+   8.4 Next Button
+9. New Arrivals Section
+   9.1 Section Heading
+   9.2 Previous Button
+   9.3 Product Carousel
+       9.3.1 Product Cards
+   9.4 Next Button
+10. Banners Section
+    10.1 Banner 1: Nintendo Switch
+    10.2 Banner 2: iPhone 14 Pro
+    10.3 Banner 3: MSI Monitor
+11. Features Section
+    11.1 Feature 1
+    11.2 Feature 2
+    11.3 Feature 3
+    11.4 Feature 4
+12. Footer Section
+    12.1 Categories Section
+    12.2 Customer Support Section
+    12.3 Policy Section
+    12.4 App Section
+    12.5 Copyright Section
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ============================================
+                 1. HTML Metadata and External Resources
+    ============================================ -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    
+    <title>Tumble</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="responsive.html" media="screen and (min-width: 700px)">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+
+    <!-- GSAP Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="web.js" defer></script>
+</head>
+<body>
+    <!-- ============================================
+                 2. Fixed Header Section
+    ============================================ -->
+    <div class="fixed-header">
+        <!-- 2.1 Logo and Heading -->
+        <div class="Heading">
+            <h3 class="logoname">Tumble</h3>
+            <div class="rightHeading">
+                <img src="delivery-truck.svg" class="deliverytruck">
+                <a class="address" href="#a">Delivery to:</a> 
+                <a href="#a">home</a>
+                <svg class="dropdown-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15L6 9H18L12 15Z" fill="black"/>
+                </svg>
+            </div>
+        </div>
+        
+        <!-- 2.2 Search Bar -->
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+    </div>
+
+    <!-- ============================================
+                 3. Fixed Bottom Navigation Bar
+    ============================================ -->
+    <div class="bottom-nav">
+        <div class="nav-item" data-page="home" data-active-icon="home2.svg">
+            <a href="web.html">
+                <img src="home.svg" alt="Home">
+                <span>Home</span>
+            </a>
+        </div>
+        <div class="nav-item" data-page="products" data-active-icon="grid2.svg">
+            <a href="#products">
+                <img src="view-grid.svg" alt="Products">
+                <span>Products</span>
+            </a>
+        </div>
+        <div class="nav-item" data-page="orders">
+            <a href="orders.html">
+                <img src="box-iso.svg" alt="Orders">
+                <span>Orders</span>
+            </a>
+        </div>
+        <div class="nav-item" data-page="account">
+            <a href="account.html">
+                <img src="user.svg" alt="Account">
+                <span>Account</span>
+            </a>
+        </div>
+        <div class="nav-item" data-page="cart" data-active-icon="cart2.svg">
+            <a href="cart.html">
+                <img src="cart1.svg" alt="Cart">
+                <span>Cart</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- ============================================
+                 4. Banner Section
+    ============================================ -->
+    <div class="banner-container">
+        <!-- 4.1 AMD Ryzen Banner -->
+        <div class="banner">
+            <div class="banner-content">
+                <h2>AMD Ryzen 9</h2>
+                <p>Get The Powerful AMD Ryzen 9000 Series</p>
+                <button class="banner-btn">View Details</button>
+            </div>
+            <img src="amd.png" alt="AMD Ryzen 9" class="banner-img amd">
+        </div>
+
+        <!-- 4.2 NVIDIA RTX Banner -->
+        <div class="banner">
+            <div class="banner-content">
+                <h2>NVIDIA RTX 4080</h2>
+                <p>Experience Ultimate Gaming Performance</p>
+                <button class="banner-btn">View Details</button>
+            </div>
+            <img src="nvidia.png" alt="NVIDIA RTX 4080" class="banner-img nvidia">
+        </div>
+    </div>
+</body>
+</html>
+   <!-- ============================================
+                 5. Recommended for You Section
+============================================ -->
+<div class="container">
+    <h2>Recommended for You</h2>
+</div>
+
+<div class="carousel-view">
+    <!-- Navigation Button: Previous -->
+    <button class="prev-btn"></button>
+
+    <!-- Product Items -->
+    <div class="item-list">
+        <!-- Product Card 1 -->
+        <a href="#" class="product-card">
+            <img src="pic1.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Product Card 2 -->
+        <a href="#" class="product-card">
+            <img src="pic2.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Product Card 3 -->
+        <a href="#" class="product-card">
+            <img src="pic3.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <img src="pic3.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <img src="pic4.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <img src="pic5.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <img src="pic2.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Add More Product Cards as Needed -->
+    </div>
+
+    <!-- Navigation Button: Next -->
+    <button class="next-btn"></button>
+</div>
+
+<!-- ============================================
+                 6. Top Selling Section
+============================================ -->
+<div class="container">
+    <h2>Top Selling</h2>
+</div>
+
+<div class="carousel-view">
+    <!-- Navigation Button: Previous -->
+    <button class="prev-btn"></button>
+
+    <!-- Product Items -->
+    <div class="item-list">
+        <!-- Product Card 1 -->
+        <a href="#" class="product-card">
+            <img src="pic4.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Product Card 2 -->
+        <a href="#" class="product-card">
+            <img src="pic2.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Product Card 3 -->
+        <a href="#" class="product-card">
+            <img src="pic3.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <img src="pic1.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <img src="pic5.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <img src="pic4.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <img src="pic3.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Add More Product Cards as Needed -->
+    </div>
+
+    <!-- Navigation Button: Next -->
+    <button class="next-btn"></button>
+</div>
+    <!-- ============================================
+                 7. PC Components Section
+============================================ -->
+<div class="container">
+    <h2>PC COMPONENTS</h2>
+</div>
+
+<div class="carousel-view">
+    <!-- Navigation Button: Previous -->
+    <button class="prev-btn"></button>
+
+    <!-- Product Items -->
+    <div class="item-list">
+        <!-- Product Card 1 -->
+        <a href="#" class="product-card">
+            <img src="pic1.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Product Card 2 -->
+        <a href="#" class="product-card">
+            <img src="pic5.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Product Card 3 -->
+        <a href="#" class="product-card">
+            <img src="pic5.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Product Card 4 -->
+        <a href="#" class="product-card">
+            <img src="pic2.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Product Card 5 -->
+        <a href="#" class="product-card">
+            <img src="pic5.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Product Card 6 -->
+        <a href="#" class="product-card">
+            <img src="pic2.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Product Card 7 -->
+        <a href="#" class="product-card">
+            <img src="pic5.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+    </div>
+
+    <!-- Navigation Button: Next -->
+    <button class="next-btn"></button>
+</div>
+
+<!-- ============================================
+                 8. Limited Offer Section
+============================================ -->
+<div class="Limitedoffer">
+    <div class="specialoffercontainer">
+        <h1>DECEMBER SALE!</h1>
+        <img src="a1.webp" alt="Sale Image">
+        <h2>LIMITED TIME OFFER</h2>
+        <h3>Be Fast and Get Up To 60% OFF!</h3>
+        <!-- Countdown Timer -->
+        <div class="countdown-timer">
+            <div class="timer">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <p>Days</p>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <p>Hr</p>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <p>Min</p>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <p>Sec</p>
+                </div>
+            </div>
+        </div>
+        <!-- Shop Button -->
+        <button class="shop-button">Go Shopping</button>
+    </div>
+</div>
+ <!-- ============================
+==== 9. Smart Watches Section ====
+============================ -->
+<div class="container">
+    <!-- == 9.1 Section Heading == -->
+    <h2>Smart Watches</h2>
+</div>
+
+<div class="carousel-view">
+    <!-- == 9.2 Previous Button == -->
+    <button id="prev-btn" class="prev-btn">
+        <!-- Icon or Label for Previous Button (Optional) -->
+    </button>
+
+    <!-- == 9.3 Product Carousel == -->
+    <div class="item-list">
+        <!-- == 9.3.1 Product Card Example == -->
+        <a href="#" class="product-card">
+            <!-- == 9.3.1.1 Product Image == -->
+            <img src="picSW1.avif" alt="Product Image">
+            <!-- == 9.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 9.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 9.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+         <a href="#" class="product-card">
+            <!-- == 9.3.1.1 Product Image == -->
+            <img src="picSW3.avif" alt="Product Image">
+            <!-- == 9.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 9.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 9.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+         <a href="#" class="product-card">
+            <!-- == 9.3.1.1 Product Image == -->
+            <img src="picSW4.avif" alt="Product Image">
+            <!-- == 9.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 9.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 9.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+         <a href="#" class="product-card">
+            <!-- == 9.3.1.1 Product Image == -->
+            <img src="picSW2.avif" alt="Product Image">
+            <!-- == 9.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 9.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 9.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+         <a href="#" class="product-card">
+            <!-- == 9.3.1.1 Product Image == -->
+            <img src="picSW1.avif" alt="Product Image">
+            <!-- == 9.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 9.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 9.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+         <a href="#" class="product-card">
+            <!-- == 9.3.1.1 Product Image == -->
+            <img src="picSW3.avif" alt="Product Image">
+            <!-- == 9.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 9.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 9.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+         <a href="#" class="product-card">
+            <!-- == 9.3.1.1 Product Image == -->
+            <img src="picSW1.avif" alt="Product Image">
+            <!-- == 9.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 9.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 9.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Repeat Product Cards for Additional Items -->
+    </div>
+
+    <!-- == 9.4 Next Button == -->
+    <button class="next-btn">
+        <!-- Icon or Label for Next Button (Optional) -->
+    </button>
+</div>
+
+<!-- ============================
+==== 10. Software Section =======
+============================ -->
+<div class="container">
+    <!-- == 10.1 Section Heading == -->
+    <h2>Software</h2>
+</div>
+
+<div class="carousel-view">
+    <!-- == 10.2 Previous Button == -->
+    <button class="prev-btn">
+        <!-- Icon or Label for Previous Button (Optional) -->
+    </button>
+
+    <!-- == 10.3 Product Carousel == -->
+    <div class="item-list">
+        <!-- == 10.3.1 Product Card Example == -->
+        <a href="#" class="product-card">
+            <!-- == 10.3.1.1 Product Image == -->
+            <img src="picsft1.avif" alt="Product Image">
+            <!-- == 10.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 10.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 10.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+          <a href="#" class="product-card">
+            <!-- == 10.3.1.1 Product Image == -->
+            <img src="picsft2.avif" alt="Product Image">
+            <!-- == 10.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 10.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 10.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>  <a href="#" class="product-card">
+            <!-- == 10.3.1.1 Product Image == -->
+            <img src="picsft4.avif" alt="Product Image">
+            <!-- == 10.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 10.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 10.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>  <a href="#" class="product-card">
+            <!-- == 10.3.1.1 Product Image == -->
+            <img src="picsft3.avif" alt="Product Image">
+            <!-- == 10.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 10.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 10.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>  <a href="#" class="product-card">
+            <!-- == 10.3.1.1 Product Image == -->
+            <img src="picsft2.avif" alt="Product Image">
+            <!-- == 10.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 10.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 10.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>  <a href="#" class="product-card">
+            <!-- == 10.3.1.1 Product Image == -->
+            <img src="picsft3.avif" alt="Product Image">
+            <!-- == 10.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 10.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 10.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>  <a href="#" class="product-card">
+            <!-- == 10.3.1.1 Product Image == -->
+            <img src="picsft1.avif" alt="Product Image">
+            <!-- == 10.3.1.2 Badge (Top Selling) == -->
+            <div class="badge2">Top Selling</div>
+            <!-- == 10.3.1.3 Product Title == -->
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <!-- == 10.3.1.4 Price Section == -->
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span> 
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Repeat Product Cards for Additional Items -->
+    </div>
+
+    <!-- == 10.4 Next Button == -->
+    <button class="next-btn">
+        <!-- Icon or Label for Next Button (Optional) -->
+    </button>
+</div>
+   <!-- ============================
+==== 11. New Arrivals Section ====
+============================ -->
+<div class="container">
+    <!-- == 11.1 Section Heading == -->
+    <h2>New Arrivals</h2>
+</div>
+
+<div class="carousel-view">
+    <!-- == 11.2 Previous Button == -->
+    <button class="prev-btn"></button>
+
+    <!-- == 11.3 Product Carousel == -->
+    <div class="item-list">
+        <!-- == 11.3.1 Product Cards == -->
+        <a href="#" class="product-card">
+            <img src="pic1.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <!-- Repeat Product Cards as Needed -->
+        <!-- Example -->
+        <a href="#" class="product-card">
+            <img src="pic2.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <img src="pic3.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <img src="pic4.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <img src="pic5.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <img src="pic1.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+        <a href="#" class="product-card">
+            <img src="pic2.avif" alt="Product Image">
+            <div class="badge2">Top Selling</div>
+            <div class="clothe-text">LOREM IPSUM DOLOR</div>
+            <div class="price-section">
+                <span class="discounted-price">PKR :</span>
+                <span class="discounted-amount">4817</span>
+                <span class="original-price">5999</span>
+                <span class="discount-percentage"></span>
+            </div>
+        </a>
+    </div>
+
+    <!-- == 11.4 Next Button == -->
+    <button class="next-btn"></button>
+</div>
+
+<!-- ============================
+==== 12. Banners Section ========
+============================ -->
+<div class="banners-container">
+    <!-- == 12.1 Banner 1: Nintendo Switch == -->
+    <div class="banner">
+        <div class="banner-content">
+            <h2>Nintendo Switch</h2>
+            <p>Get the perfect gaming switch today</p>
+            <button class="banner-btn">View Details</button>
+        </div>
+        <img src="picnintendo.png" alt="Nintendo Switch" class="banner-img">
+    </div>
+    
+    <!-- == 12.2 Banner 2: iPhone 14 Pro == -->
+    <div class="banner">
+        <div class="banner-content">
+            <h2>IPhone 14 Pro</h2>
+            <p>Get Your Own IPhone 14 Today</p>
+            <button class="banner-btn">View Details</button>
+        </div>
+        <img src="iphone.png" alt="iPhone 14 Pro" class="banner-img">
+    </div>
+    
+    <!-- == 12.3 Banner 3: MSI Monitor == -->
+    <div class="banner">
+        <div class="banner-content">
+            <h2>MSI Monitor</h2>
+            <p>Get The Best Monitors From MSI</p>
+            <button class="banner-btn">View Details</button>
+        </div>
+        <img src="msi.png" alt="MSI Monitor" class="banner-img">
+    </div>
+</div>
+
+<!-- ============================
+==== 13. Features Section =======
+============================ -->
+<div class="features">
+    <!-- == 13.1 Feature 1 == -->
+    <a href="#Cart" class="features-item">
+        <img src="percent.svg" alt="offer icon">
+        15% OFF ON ORDERS ABOVE 99$
+    </a>
+    <!-- == 13.2 Feature 2 == -->
+    <a href="#Cart" class="features-item">
+        <img src="globe.svg" alt="worldwide shipping icon">
+        FAST WORLDWIDE SHIPPING
+    </a>
+    <!-- == 13.3 Feature 3 == -->
+    <a href="#Cart" class="features-item">
+        <img src="return.svg" alt="return policy icon">
+        15 DAY RETURN POLICY
+    </a>
+    <!-- == 13.4 Feature 4 == -->
+    <a href="#Cart" class="features-item">
+        <img src="headphones.svg" alt="support icon">
+        24/7 LIVE SUPPORT
+    </a>
+</div>
+
+<!-- ============================
+==== 14. Footer Section =========
+============================ -->
+<footer>
+    <div class="footer-container">
+        <!-- == 14.1 Categories Section == -->
+        <div class="footer-section">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">Softwares</a></li>
+                <li><a href="#">Computer Components</a></li>
+                <li><a href="#">Headphones</a></li>
+                <li><a href="#">Consoles & Gaming</a></li>
+                <li><a href="#">Wearable & Gadgets</a></li>
+                <li><a href="#">Smartphones & Tablets</a></li>
+            </ul>
+        </div>
+
+        <!-- == 14.2 Customer Support Section == -->
+        <div class="footer-section">
+            <h3>Customer Support</h3>
+            <ul>
+                <li><a href="#">Promotions</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Delivery & Return</a></li>
+                <li><a href="#">Track Order</a></li>
+                <li><a href="#">Loyalty Program</a></li>
+            </ul>
+        </div>
+
+        <!-- == 14.3 Policy Section == -->
+        <div class="footer-section policy-section">
+            <h3>Policy</h3>
+            <ul>
+                <li><a href="#">Delivery, Return, and Warranty</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Billing Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- == 14.4 App Section == -->
+        <div class="footer-section app-section">
+            <h3>Download App on Mobile:</h3>
+            <a href="#"><img src="GP.webp" alt="Google Play" width="120"></a>
+            <a href="#"><img src="apple.png" alt="App Store" width="120"></a>
+            <div class="social-icons">
+                <a href="#"><img src="fb.webp" alt="Facebook"></a>
+               
+                <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- == 14.5 Copyright Section == -->
+    <div class="copyright">
+        <p>Copyright © 2016-2024 Tumble. All Rights Reserved.</p>
+    </div>
+</footer>
+
