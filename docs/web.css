@@ -1,0 +1,884 @@
+/* ============================================================
+   TABLE OF CONTENTS - KEY SECTIONS
+   ============================================================
+
+   1. Global Styles
+      1.1 Typography and Font Settings
+      1.2 Basic Reset and Utilities
+
+   2. Fixed Header
+      2.1 Header Layout and Styling
+      2.2 Navigation Bar
+      2.3 Dropdown Menu
+
+   3. Search Bar
+      3.1 Search Input Field Styling
+      3.2 Search Button Design
+
+   4. Bottom Navigation
+      4.1 Navigation Bar Layout
+      4.2 Active State Styling
+
+   5. Limited Time Offer Section
+      5.1 Offer Banner Design
+      5.2 Countdown Timer Styling
+
+   6. Banner Section
+      6.1 Full-Width Banner Background
+      6.2 Call-to-Action Button
+
+   7. Feature Section
+      7.1 Feature Cards Layout
+      7.2 Hover Effects for Feature Cards
+
+   8. Footer Section
+      8.1 Footer Layout and Styling
+      8.2 Social Media Icons
+      8.3 Copyright and Links
+
+   9. Carousel Section
+      9.1 Carousel Layout
+      9.2 Product Cards
+         9.2.1 General Card Design
+         9.2.2 Responsive Adjustments
+         9.2.3 Badge, Image, and Price Styling
+
+============================================================== */
+
+
+/* ===================================================
+   1. GLOBAL STYLES
+   =================================================== */
+
+/* Reset and Basic Styles */
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    padding-top: 7rem; /* Adds spacing to avoid content overlap with fixed header */
+}
+
+/* Box-Sizing for Consistency */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Tap Highlight Removal for Links */
+body a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ===================================================
+   2. FIXED HEADER
+   =================================================== */
+
+/* Header Styles */
+.fixed-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures header stays above other elements */
+    height: 60px; /* Sets the header height */
+    background-color: #fff; /* White background for visibility */
+}
+
+/* Logo and Branding */
+.logoname {
+    font-family: "Poppins", sans-serif;
+    padding: 0.6rem 1rem;
+    color: #F3510B; /* Bright orange for brand identity */
+    font-size: 1rem;
+}
+
+/* Header Layout */
+.Heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distributes space between items */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+/* Right-Side Header */
+.rightHeading {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem; /* Space between elements */
+}
+body a {
+    font-family: "Questrial", sans-serif;
+    font-size: 0.85rem; /* Text size for links */
+}
+
+/* Dropdown Arrow Styles */
+.dropdown-arrow {
+    transition: transform 0.3s ease; /* Smooth rotation effect */
+}
+.rightHeading:hover .dropdown-arrow {
+    transform: rotate(180deg); /* Rotates the arrow on hover */
+}
+
+/* Delivery Address */
+.address {
+    opacity: 0.8; /* Subtle text effect for secondary information */
+}
+
+/* ===================================================
+   3. SEARCH BAR
+   =================================================== */
+
+/* Search Bar Container */
+.search-container {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+/* Search Bar Input */
+.search-bar {
+    width: 92.5%; /* Adjust for responsiveness */
+    padding: 0.35rem;
+    font-size: 1rem;
+    border: 1px solid #ddd; /* Default border */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease; /* Smooth border color change */
+}
+
+/* Placeholder Styling */
+.search-bar::placeholder {
+    font-size: 0.85rem; /* Smaller placeholder text */
+    color: #bbb;
+    opacity: 1;
+}
+
+/* Focus Effect */
+.search-bar:focus {
+    border-color: #F3510B; /* Orange border on focus */
+}
+
+/* ===================================================
+   4. BOTTOM NAVIGATION
+   =================================================== */
+
+/* Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.1rem 0;
+    background-color: #fff;
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    z-index: 1000; /* Keeps navigation above other elements */
+}
+
+/* Navigation Items */
+.nav-item {
+    width: 60px; /* Fixed width for items */
+    height: 60px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Navigation Links */
+.nav-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333; /* Default text color */
+    font-family: "Questrial", sans-serif;
+    font-size: 0.8rem;
+    transition: color 0.3s, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Navigation Icons */
+.nav-item a img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0.2rem; /* Space between icon and text */
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.nav-item:hover a img {
+    transform: scale(1.15); /* Slightly enlarge icons */
+}
+.nav-item:hover a span {
+    color: #F3510B; /* Orange color on hover */
+    transform: scale(1.1); /* Slightly enlarge text */
+}
+
+/* Active State */
+.nav-item.active a img {
+    transform: scale(1.2); /* Larger icons for active items */
+}
+.nav-item.active a span {
+    color: #F3510B; /* Highlight active text in orange */
+}
+
+
+/* ===================================================
+   5. LIMITED TIME OFFER SECTION
+   =================================================== */
+
+/* Limited Offer Section Styling */
+.Limitedoffer {
+    padding-top: 1.8rem;
+    background-color: #F6F6F6; /* Light gray background for contrast */
+}
+
+/* Limited Offer Image */
+.Limitedoffer img {
+    width: 85%; /* Slightly smaller width for visual balance */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Centers the image */
+    margin: 0 auto;
+    border-radius: 1rem; /* Rounded corners for a softer look */
+}
+
+/* Padding Adjustment for the Last Limited Offer */
+.Limitedoffer:last-child {
+    padding-bottom: 6rem;
+}
+
+/* Limited Offer Headings */
+.Limitedoffer h2, .Limitedoffer h3 {
+    font-family: "Poppins", sans-serif; /* Modern and clean font */
+    text-align: center;
+    padding-top: 2rem;
+    font-weight: 600;
+}
+
+.Limitedoffer h3 {
+    font-family: "Questrial", sans-serif; /* Slightly different font for variety */
+    padding-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.Limitedoffer h1 {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* Countdown Timer Styling */
+.countdown-timer {
+    text-align: center;
+    font-family: "Cabin", sans-serif; /* Readable and clean font */
+    background: linear-gradient(120deg, #F3F3F3, #FAFAFA); /* Subtle gradient effect */
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Timer Flexbox Layout */
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Space between time boxes */
+    margin-top: 1rem;
+}
+
+/* Individual Time Box Styling */
+.time-box {
+    background: #F2490C; /* Bright orange for emphasis */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 70px;
+}
+
+.time-box span {
+    font-size: 1.5rem; /* Large, bold numbers */
+    font-weight: bold;
+    color: #FFF;
+}
+
+.time-box p {
+    margin: 0;
+    font-size: 0.8rem; /* Smaller labels for time units */
+    color: #FFF;
+}
+
+/* Shop Button Styling */
+.shop-button {
+    background: #FF5500; /* Bold orange button */
+    color: white;
+    padding: 0.7rem 1.7rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: background 0.3s ease;
+}
+
+.shop-button:hover {
+    background: #0056b3; /* Blue hover effect */
+}
+@media screen and (max-width: 700px) {
+    .Limitedoffer {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the entire content */
+        justify-content: center;
+        text-align: center;
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .Limitedoffer h1,
+    .Limitedoffer h2,
+    .Limitedoffer h3 {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+
+    .Limitedoffer img {
+        width: 100%; /* Make the image responsive */
+        max-width: 300px; /* Set a max width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 1rem; /* Add space below the image */
+    }
+
+    .shop-button {
+        align-self: center; /* Ensure the button is centered */
+        margin-top: 1rem; /* Add space above the button */
+        padding: 0.7rem 1.5rem; /* Adjust padding for smaller screens */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .countdown-timer {
+        width: 90%; /* Adjust the width */
+        max-width: 350px; /* Set a max width */
+        margin: 0 auto 2rem; /* Center the timer and add spacing */
+    }
+}
+
+
+/* ===================================================
+   6. BANNER SECTION
+   =================================================== */
+
+/* Banners Container */
+.banners-container {
+    padding-bottom: 6rem; /* Ensures content doesn't overlap with the fixed header */
+    margin-top: 6rem; /* Adds space above the banners */
+}
+
+/* Individual Banners */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ff0000, #FF5555); /* Red gradient */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px 0; /* Space between banners */
+    overflow: hidden;
+}
+
+/* Specific Banner Colors */
+.banners-container .banner:nth-child(2) {
+    background: linear-gradient(to right, #FF006F, #FF75B1); /* Pink gradient */
+}
+
+.banners-container .banner:nth-child(3) {
+    background: linear-gradient(to right, #1111FF, #6565FF); /* Blue gradient */
+}
+
+/* Banner Content Styling */
+.banner-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.banner-content h2 {
+    font-size: 1.5em;
+    color: #fff; /* White text for contrast */
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner-content p {
+    font-size: 1em;
+    color: #f9f9f9; /* Slightly lighter text for emphasis */
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Banner Button Styling */
+.banner-btn {
+    padding: 10px 20px;
+    background-color: #FFF; /* White button */
+    color: #373737; /* Dark text color */
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #F3F3F3; /* Light gray on hover */
+}
+
+/* Banner Image Styling */
+.banner-img {
+    max-width: 150px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease;
+}
+
+.banner-img:hover {
+    transform: scale(1.15); /* Enlarge slightly on hover */
+}
+
+/* Specific Transformations */
+.amd {
+    transform: scale(1.8);
+}
+
+.amd:hover {
+    transform: scale(2); /* Further enlarge AMD image on hover */
+}
+
+.nvidia {
+    transform: scale(1.2);
+}
+
+.nvidia:hover {
+    transform: scale(1.3); /* Slightly enlarge NVIDIA image on hover */
+}
+
+/* ===================================================
+   7. FEATURES SECTION
+   =================================================== */
+
+/* Features Container */
+.features {
+    display: flex; /* Aligns items in a row */
+    justify-content: space-around; /* Evenly spaces items */
+    align-items: center; /* Centers icons and text vertically */
+    background-color: #FCFCFC; /* Light background for contrast */
+    padding: 1rem;
+    padding-bottom: 5rem; /* Extra padding for spacing */
+    margin-top: -5rem; /* Negative margin to align with layout */
+}
+
+/* Features Links */
+.features a {
+    color: #2F2F2F; /* Dark text color */
+    font-family: "Questrial", sans-serif; /* Clean and simple font */
+    font-size: 0.8rem; /* Slightly smaller font */
+    display: flex; /* Aligns icon and text inline */
+    flex-direction: column; /* Icons stack above text on smaller screens */
+    align-items: center; /* Centers content */
+    text-align: center; /* Aligns text under icons */
+    gap: 5px; /* Space between icon and text */
+}
+
+/* Features Icons */
+.features img {
+    width: 24px; /* Icon size */
+    height: 24px;
+}
+
+
+/* ===================================================
+   8. FOOTER SECTION
+   =================================================== */
+
+footer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: left;
+    border-top: 1px solid #ddd;
+    padding-bottom: 5rem;
+}
+
+/* Footer Container Layout */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: -1rem;
+}
+
+/* Individual Footer Sections */
+.footer-section {
+    margin: 10px;
+    
+    text-align: center;
+}
+
+/* Footer Section Titles */
+.footer-section h3 {
+    font-family: "Questrial",sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Footer Links */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-section ul li a:hover {
+    color: #007bff; /* Blue hover effect */
+}
+
+/* Footer Additional Styling */
+.contact-info, .policy-section, .app-section {
+    font-size: 14px;
+}
+
+/* Social Icons Styling */
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 3rem;
+}
+
+.social-icons {
+    margin-top: 10px; /* Space above icons */
+    text-align: center; /* Center align icons */
+}
+
+.social-icons img {
+    width: 40px; /* Icon size */
+    height: 40px;
+    margin: 5px; /* Space between icons */
+    padding: 2px; /* Padding inside border */
+}
+
+/* Footer Copyright Section */
+.copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+    font-family: "Questrial", sans-serif;
+}
+
+/* Button Styling for Footer */
+.footer-btn {
+    display: inline-block;
+    background-color: #007bff; /* Blue background */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.footer-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer Divider Line */
+.footer-divider {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+@media screen and (max-width: 486px) {
+    .footer {
+        display: flex;
+        flex-direction: column; /* Stack footer content vertically */
+        align-items: center; /* Center all content horizontally */
+        text-align: center; /* Ensure text is centered */
+        padding: 1.5rem; /* Add some padding around the footer */
+    }
+
+    .footer-categories {
+        display: flex;
+        flex-direction: column; /* Keep categories in columns */
+        align-items: center; /* Center align the categories */
+        gap: 1rem; /* Add spacing between categories */
+    }
+
+    .footer-category {
+        display: flex;
+        flex-direction: column; /* Ensure items are stacked */
+        align-items: center; /* Center items within each category */
+        margin-bottom: 1rem; /* Add spacing between categories */
+    }
+
+    .footer-category li {
+        margin: 0.5rem 0; /* Add space between list items */
+    }
+
+    .footer-logo {
+        margin-top: 1rem; /* Space the logo from other content */
+        max-width: 150px; /* Adjust the size of the logo */
+        height: auto;
+    }
+
+    .footer-social-links {
+        display: flex;
+        justify-content: center; /* Center social links */
+        gap: 1rem; /* Add spacing between links */
+        margin-top: 1rem;
+    }
+
+    .footer-text {
+        font-size: 0.875rem; /* Adjust font size for smaller screens */
+        margin-top: 1rem;
+    }
+}
+
+
+/* ===================================================
+     9.   CAROUSEL STYLING AND FUNCTIONALITY
+   =================================================== */
+.container {
+    width: 100%; /* Full-width container */
+    display: flex; /* Flex layout for alignment */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    margin-top: 20px; /* Space above the container */
+    font-family: "Poppins", sans-serif; /* Font styling */
+}
+
+.carousel-view {
+    position: relative; /* Enables positioning of arrows */
+    display: flex; /* Flex layout for content alignment */
+    justify-content: center; /* Center content */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Full-width view */
+    gap: 10px; /* Spacing between elements */
+    padding: 20px 0; /* Vertical padding for spacing */
+    overflow: hidden; /* Prevents content overflow */
+}
+
+.item-list {
+    display: flex; /* Horizontal layout for items */
+    gap: 20px; /* Space between items */
+    overflow-x: auto; /* Horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Smooth scrolling snap */
+    scroll-behavior: smooth; /* Smooth scroll behavior */
+    padding: 0px 10px; /* Padding around the items */
+    align-items: center; /* Vertical alignment */
+    position: relative; /* Enables relative positioning */
+}
+
+.item-list::-webkit-scrollbar {
+    display: none; /* Hides the default scrollbar */
+}
+
+.prev-btn, .next-btn {
+    flex-shrink: 0; /* Prevent resizing of buttons */
+    background-color: #ffffff; /* White background */
+    border: 1px solid #cccccc; /* Light border */
+    border-radius: 50%; /* Circular buttons */
+    display: flex; /* Flex layout for icon alignment */
+    align-items: center; /* Center icon vertically */
+    justify-content: center; /* Center icon horizontally */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    transition: transform 0.3s ease; /* Smooth transformation */
+    margin-left: 10px; /* Spacing from adjacent elements */
+}
+
+.prev-btn {
+    left: 20rem; /* Relative position from carousel */
+}
+
+.next-btn {
+    right: 20rem; /* Relative position from carousel */
+}
+
+.prev-btn::before, .next-btn::before {
+    content: ""; /* Placeholder content for arrow styling */
+    display: inline-block; /* Block-level display for arrows */
+    width: 10px; /* Arrow width */
+    height: 10px; /* Arrow height */
+    border-top: 2px solid #333; /* Top border for arrow */
+    border-right: 2px solid #333; /* Right border for arrow */
+}
+
+.prev-btn::before {
+    transform: rotate(-135deg); /* Left-pointing arrow */
+    margin-left: 4px; /* Spacing adjustment */
+    margin-top: 3px; /* Vertical adjustment */
+}
+
+.next-btn::before {
+    transform: rotate(45deg); /* Right-pointing arrow */
+    margin-right: 4px; /* Spacing adjustment */
+    margin-top: 3px; /* Vertical adjustment */
+}
+
+/* Product Card for Consistent Layout */
+.product-card {
+    position: relative; /* Positioning for overlays */
+    scroll-snap-align: center; /* Align with carousel scrolling */
+    min-width: calc(100% / 5 - 20px); /* Five cards per row on large screens */
+    flex: 0 0 auto; /* Fixed size for flex items */
+    background: #fff; /* White background */
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Prevent overflow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+/* Mobile Styles (Max-Width: 700px) */
+@media screen and (min-width: 551px) and (max-width: 699px) {
+    .prev-btn, .next-btn {
+        display: none !important; /* Hide navigation buttons */
+    }
+
+    .item-list {
+        display: flex; /* Maintain horizontal layout */
+        gap: 10px; /* Reduce gap for smaller screens */
+        overflow-x: auto; /* Horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Snap scrolling */
+        padding: 0 10px; /* Adjust padding */
+    }
+
+    .product-card {
+        flex: 0 0 calc(100% / 3 - 10px); /* Three cards per row */
+        max-width: calc(100% / 3 - 10px); /* Adjust maximum width */
+    }
+
+    .product-card img {
+        max-width: 80%; /* Reduce image size */
+        height: auto; /* Maintain aspect ratio */
+        margin: 1rem auto; /* Center image */
+    }
+}
+
+
+/* Badge Styling for Product Card */
+.product-card .badge {
+    position: absolute; /* Overlay positioning */
+    top: 0.5rem; /* Offset from top */
+    left: 0.5rem; /* Offset from left */
+    padding: 0.25rem 0.5rem; /* Padding for readability */
+    font-size: 0.65rem; /* Small font size */
+    border-radius: 0.4rem; /* Rounded badge corners */
+    font-family: "Poppins", sans-serif; /* Font styling */
+    color: white; /* Text color */
+    background-color: #F2490C; /* Background color */
+    z-index: 10; /* Ensure badge stays on top */
+}
+
+/* Product Image Styling */
+.product-card img {
+    width: 100%; /* Full width */
+    max-width: 120px; /* Restrict maximum size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0.625rem; /* Rounded image corners */
+    margin-top: 3rem; /* Space above image */
+    transition: transform 0.3s ease; /* Smooth scaling */
+    transform: scale(1.1); /* Slightly larger for effect */
+}
+
+/* Clothing Text Styling */
+.clothe-text {
+    margin-top: 0.725rem; /* Space above */
+    font-weight: bold; /* Emphasize text */
+    font-size: 0.875rem; /* Medium font size */
+    transition: color 0.3s ease; /* Smooth color transition */
+    font-family: "Poppins", sans-serif; /* Font styling */
+    padding: 10px; /* Padding for readability */
+}
+
+/* Price Section Styling */
+.price-section {
+    margin-top: 0.5rem; /* Space above */
+    font-size: 1rem; /* Medium font size */
+    font-family: "Questrial", sans-serif; /* Font styling */
+    padding-bottom: 1.2rem; /* Space below */
+}
+
+/* Discounted Price Styling */
+.discounted-amount {
+    color: #FC7222; /* Highlighted color */
+    font-weight: bold; /* Emphasize text */
+    font-size: 0.9rem; /* Slightly larger font */
+}
+
+/* Original Price Styling */
+.original-price {
+    text-decoration: line-through; /* Strikethrough effect */
+    color: #FF6633; /* Distinct color */
+    font-size: 0.75rem; /* Smaller font size */
+    margin-left: 0.5rem; /* Space from discounted price */
+}
+
+/* Additional Badges for Mobile View */
+.product-card .badge, 
+.product-card .badge2, 
+.product-card .badge3 {
+    position: absolute; /* Position badges relative to .product-card */
+    top: 0.5rem; /* Offset from top */
+    left: 0.5rem; /* Offset from left */
+    padding: 0.25rem 0.50rem; /* Padding for readability */
+    font-size: 0.65rem; /* Small font size */
+    border-radius: 0.4rem; /* Rounded corners */
+    font-family: "Poppins", sans-serif; /* Font styling */
+    color: white; /* Text color */
+    background-color: #F2490C; /* Badge background color */
+    z-index: 10; /* Ensure badges stay on top */
+}
+@media screen and (max-width: 550px) {
+     .prev-btn, .next-btn {
+        display: none !important; /* Hide navigation buttons */
+    }
+
+    .item-list {
+        display: flex; /* Maintain horizontal layout */
+        gap: 10px; /* Reduce gap for smaller screens */
+        overflow-x: auto; /* Horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Snap scrolling */
+        padding: 0 10px; /* Adjust padding */
+    }
+
+    .product-card {
+        flex: 0 0 calc(100% / 2.2 - 10px); /* Three cards per row */
+        max-width: calc(100% / 2.2 - 10px); /* Adjust maximum width */
+    }
+
+    .product-card img {
+        max-width: 80%; /* Reduce image size */
+        height: auto; /* Maintain aspect ratio */
+        margin: 1rem auto; /* Center image */
+    }
+}

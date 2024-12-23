@@ -1,0 +1,222 @@
+<!-- ============================
+==== Table of Contents ==========
+============================ -->
+<!-- 1. Header Section (Lines 13–28) -->
+<!-- 2. Product Card Section (Lines 29–103) -->
+<!--    2.1 Product Card 1 (Lines 35–67) -->
+<!--    2.2 Product Card 2 (Lines 68–103) -->
+<!-- 3. Coupon Section (Lines 104–108) -->
+<!-- 4. Order Summary Section (Lines 109–126) -->
+<!-- 5. Payment Logos Section (Lines 127–131) -->
+<!-- 6. Checkout Tab Section (Lines 132–146) -->
+<!-- 7. Bottom Navigation Section (Lines 147–172) -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Links -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+
+    <title>Tumble</title>
+
+    <!-- External Stylesheets and Scripts -->
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="cart.js" defer></script>
+</head>
+
+<body>
+<!-- ============================
+==== 1. Header Section =========
+============================ -->
+<header class="header">
+    <!-- == 1.1 Heading with Cart Title and Wishlist == -->
+    <div class="heading">
+        <p class="hding">Cart <span>(3 items)</span></p>
+        <a href="#">Wishlist</a>
+    </div>
+    
+    <!-- == 1.2 Delivery Address Information == -->
+    <div class="rightHeading">
+        <img src="delivery-truck.svg" class="deliverytruck">
+        <a class="address" href="#a">Delivery to:</a> 
+        <a href="#a">home</a>
+        <svg class="dropdown-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 15L6 9H18L12 15Z" fill="black" />
+        </svg>
+    </div>
+</header>
+
+<!-- ============================
+==== 2. Product Card Section ===
+============================ -->
+<div class="product-card-container">
+    <!-- == 2.1 Product Card 1 == -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="picnintendo.png" alt="Nintendo Switch">
+        </div>
+        <div class="product-details">
+            <div class="product-company">Nintendo.co</div>
+            <div class="product-name">Nintendo Switch</div>
+            <div class="product-price">
+                <span class="currency">SAR</span> <span class="amount">1999.00</span>
+            </div>
+            <div class="gap-text">
+                Get it by <span class="highlight">Tomorrow</span> Order in 7h 34m
+            </div>
+            <div class="gap-text">
+                Get it as early as <span class="highlight">Today</span>
+            </div>
+            <div class="quantity-actions">
+                <button class="quantity-btn">-</button>
+                <div class="quantity-value">2</div>
+                <button class="quantity-btn">+</button>
+            </div>
+        </div>
+        <div class="product-icons">
+            <a href="#" class="icon-link">
+                <img src="wishlist.svg" alt="Wishlist">
+            </a>
+            <a href="#" class="icon-link">
+                <img src="trash.svg" alt="Trash">
+            </a>
+        </div>
+    </div>
+
+    <!-- == 2.2 Product Card 2 == -->
+    <div class="product-card">
+        <div class="product-image">
+            <img src="picSW1.avif" alt="Smart Watch">
+        </div>
+        <div class="product-details">
+            <div class="product-company">Watchesco.ltd</div>
+            <div class="product-name">Smart Watch with Heart Rate monitoring</div>
+            <div class="product-price">
+                <span class="currency">SAR</span> <span class="amount">1999.00</span>
+            </div>
+            <div class="gap-text">
+                Get it by <span class="highlight">Tomorrow</span> Order in 7h 34m
+            </div>
+            <div class="gap-text">
+                Get it as early as <span class="highlight">Today</span>
+            </div>
+            <div class="quantity-actions">
+                <button class="quantity-btn">-</button>
+                <div class="quantity-value">2</div>
+                <button class="quantity-btn">+</button>
+            </div>
+        </div>
+        <div class="product-icons">
+            <a href="#" class="icon-link">
+                <img src="wishlist.svg" alt="Wishlist">
+            </a>
+            <a href="#" class="icon-link">
+                <img src="trash.svg" alt="Trash">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ============================
+==== 3. Coupon Section =========
+============================ -->
+<div class="coupon-container">
+    <input type="text" placeholder="Enter Your Coupon Code">
+    <button>Apply</button>
+</div>
+
+<!-- ============================
+==== 4. Order Summary Section ==
+============================ -->
+<div class="summary-container">
+    <!-- == 4.1 Summary Details == -->
+    <div class="summary-details">
+        <div class="summary-item">
+            <span>Subtotal <span class="gray-text">(2 items)</span></span>
+            <span>SAR <span>2199</span></span>
+        </div>
+        <div class="summary-item">
+            <span>Shipping Fee</span>
+            <span>SAR 18</span>
+        </div>
+    </div>
+    <!-- Divider -->
+    <div class="divider"></div>
+    <!-- == 4.2 Total == -->
+    <div class="total-container">
+        <span>Total <span class="gray-text">(incl. TAX)</span></span>
+        <span>SAR 2217</span>
+    </div>
+</div>
+
+<!-- ============================
+==== 5. Payment Logos Section ==
+============================ -->
+<div class="payment-logos">
+    <img src="mada.svg" alt="Mada">
+    <img src="visa.webp" alt="Visa">
+    <img src="mastercard.png" alt="MasterCard">
+</div>
+
+<!-- ============================
+==== 6. Checkout Tab Section ===
+============================ -->
+<a href="#" class="checkout-tab">
+    <div class="left">
+        <div class="items">2 Items</div>
+        <div class="total">SAR 2217</div>
+    </div>
+    <div class="middle">Checkout</div>
+    <div class="right">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+            <path d="M13 5L19 12L13 19" stroke="#F35318" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M5 12H19" stroke="#F35318" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </div>
+</a>
+
+<!-- ============================
+==== 7. Bottom Navigation Section 
+============================ -->
+<div class="bottom-nav">
+    <div class="nav-item" data-page="home" data-active-icon="home2.svg">
+        <a href="web.html">
+            <img src="home.svg" alt="Home">
+            <span>Home</span>
+        </a>
+    </div>
+    <div class="nav-item" data-page="products" data-active-icon="grid2.svg">
+        <a href="#products">
+            <img src="view-grid.svg" alt="Products">
+            <span>Products</span>
+        </a>
+    </div>
+    <div class="nav-item" data-page="orders">
+        <a href="orders.html">
+            <img src="box-iso.svg" alt="Orders">
+            <span>Orders</span>
+        </a>
+    </div>
+    <div class="nav-item" data-page="account">
+        <a href="account.html">
+            <img src="user.svg" alt="Account">
+            <span>Account</span>
+        </a>
+    </div>
+    <div class="nav-item" data-page="cart" data-active-icon="cart2.svg">
+        <a href="cart.html">
+            <img src="cart1.svg" alt="Cart">
+            <span>Cart</span>
+        </a>
+    </div>
+</div>
+</body>
+</html>
+

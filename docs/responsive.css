@@ -1,0 +1,162 @@
+@media (min-width:700px) {
+.card-slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .card-container {
+        justify-content: center; /* Center align cards */
+        flex-wrap: wrap; /* Allow wrapping on larger screens */
+        gap: 1.5rem; /* Increase space between cards */
+    }
+
+    .card {
+        flex: 0 0 18%; /* 5 cards per row approximately */
+        max-width: 200px;
+        min-width: 160px;
+    }
+
+    .Homepage {
+        align-items: center; /* Center the entire container */
+    }
+
+    .tcheading, .rcheading {
+        text-align: center; /* Ensure headings are centered */
+        margin: 1rem auto;
+    }
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 2rem;
+    z-index: 100;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+.Limitedoffer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        max-width: 80%; /* Reduce overall width */
+        margin: 2rem auto; /* Center content */
+    }
+
+    .Limitedoffer img {
+        width: 70%; /* Prevent it from spanning too wide */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 400px; /* Optional: limit height */
+    }
+
+  
+/* General container for banners */
+.banner-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow banners to wrap */
+    justify-content: space-between; /* Space banners evenly */
+    gap: 1rem; /* Space between banners */
+    margin: 1rem auto; /* Margin around the container */
+    padding: 0 1rem; /* Padding on sides */
+    max-width: 1300px; /* Prevent banners from stretching too wide */
+}
+
+/* Individual banner styles */
+.banner {
+    flex: 0 1 calc(50% - 1.5rem); /* Two banners in a row, with space between */
+    box-sizing: border-box; /* Prevent layout issues with padding */
+    border: 1px solid #ddd; /* Optional border for cleaner look */
+    border-radius: 8px; /* Optional rounded corners */
+    background-color: white; /* Ensures a clean background */
+    overflow: hidden; /* Prevents content spill */
+}
+
+/* Ensure banner images scale properly */
+.banner img {
+    width: 100%; /* Banner image fills its container */
+    height: auto; /* Maintain original aspect ratio */
+    display: block;
+    object-fit: contain; /* Prevent stretching */
+}
+/* END OF TOP BANNERS, BELOW ARE BOTTOM BANNERS */
+.banners-container {
+    display: flex; /* Enables flexbox */
+    flex-wrap: wrap; /* Allows items to wrap if needed */
+    justify-content: space-between; /* Space banners evenly */
+    gap: 1rem; /* Add spacing between banners */
+    margin: 2rem auto; /* Add margins */
+    max-width: 1350px; /* Prevent excessive stretching on wider screens */
+    padding: 0 1rem; /* Adds padding on the sides */
+}
+
+.banner {
+    flex: 1 1 calc(33.33% - 1rem); /* Ensures three banners in a row with space */
+    box-sizing: border-box; /* Include padding and border in width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ff0000, #FF5555);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-width: 280px; /* Ensures banners don’t shrink too much */
+}
+
+.banner:nth-child(2) {
+    background: linear-gradient(to right, #FF006F, #FF75B1);
+}
+
+.banner:nth-child(3) {
+    background: linear-gradient(to right, #1111FF, #6565FF);
+}
+
+.banner-img {
+    max-width: 150px; /* Keeps image size fixed */
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.banner-content {
+    flex: 1; /* Takes remaining space */
+    margin-right: 1rem;
+}
+
+.banner-btn {
+    padding: 10px 20px;
+    background-color: #FFF;
+    color: #373737;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #F3F3F3;
+}
+.features {
+    margin-top: 1rem;
+}
+
+
+
+}
+

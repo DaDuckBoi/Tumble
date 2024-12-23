@@ -1,0 +1,610 @@
+/* ====================================================================
+1. Global Styles
+==================================================================== */
+/* 1.1 General Resets ...............................................  */
+
+/* ====================================================================
+2. Header Section
+==================================================================== */
+/* 2.1 Header Container .............................................  */
+/* 2.2 Heading Styles ...............................................  */
+/* 2.3 Address Styles ...............................................  */
+
+/* ====================================================================
+3. Product Cards
+==================================================================== */
+/* 3.1 Product Card Layout ..........................................  */
+/* 3.2 Product Image ................................................  */
+/* 3.3 Product Details ..............................................  */
+/* 3.4 Product Price ................................................  */
+/* 3.5 Quantity Actions .............................................  */
+/* 3.6 Product Icons ................................................  */
+/* 3.7 Responsive Styles ............................................  */
+
+/* ====================================================================
+4. Responsive Styles
+==================================================================== */
+/* 4.1 Adjustments for Small Screens ................................  */
+
+/* ====================================================================
+5. Coupon and Summary Section
+==================================================================== */
+/* 5.1 Coupon Input .................................................  */
+/* 5.2 Summary Container ............................................ */
+/* 5.3 Summary Items ................................................  */
+/* 5.4 Payment Logos ................................................  */
+
+/* ====================================================================
+6. Checkout Tab Section
+==================================================================== */
+/* 6.1 Checkout Tab .................................................  */
+/* 6.2 Responsive Styles ............................................  */
+
+/* ====================================================================
+7. Features Section
+==================================================================== */
+/* 7.1 Feature Items ................................................  */
+
+/* ====================================================================
+8. Footer Section
+==================================================================== */
+/* 8.1 Footer Container .............................................  */
+
+/* ====================================================================
+9. Navigation Bar
+==================================================================== */
+/* 9.1 Bottom Navigation Bar ........................................  */
+/* 9.2 Navigation Items .............................................  */
+/* 9.3 Navigation Links ............................................. */
+/* 9.4 Navigation Icons .............................................  */
+/* 9.5 Hover Effects ................................................  */
+/* 9.6 Active State ................................................. */
+
+
+/* ====================================================================
+1. Global Styles
+==================================================================== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Ensures consistent sizing */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Inherits text color from parent */
+}
+
+body a {
+    -webkit-tap-highlight-color: transparent; /* Removes highlight effect on tap */
+}
+
+/* ====================================================================
+2. Header Section
+==================================================================== */
+
+/* == 2.1 General Header Styling == */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* == 2.2 Heading Styling == */
+.heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hding {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.heading span {
+    font-size: 0.8rem; /* Smaller text for item count */
+    color: #666; /* Subtle color */
+    margin: 0;
+    display: inline;
+    margin-top: 0.15rem;
+}
+
+.heading p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem; /* Main heading size */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between text and item count */
+}
+
+.heading a {
+    cursor: pointer;
+    background-color: #F9F9F9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 0.5rem;
+    border-radius: 8px; /* Rounded edges */
+    margin-right: 0.5rem;
+    position: relative;
+    font-size: 0.85rem; /* Smaller text */
+    font-family: "Questrial", sans-serif;
+}
+
+.heading a::after {
+    content: '';
+    display: inline-block;
+    border: solid black;
+    border-width: 0 1.5px 1.5px 0;
+    padding: 4px;
+    transform: rotate(315deg); /* Right-facing arrow */
+    position: relative;
+    top: -1px;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+.heading a:hover::after {
+    transform: rotate(405deg); /* Rotates arrow on hover */
+}
+
+/* == 2.3 Right Heading Styling == */
+.rightHeading {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #FAF6F6;
+    padding: 0.4rem;
+    border-radius: 20px;
+    margin: 10px auto;
+    justify-content: center;
+    font-family: "Questrial", sans-serif;
+}
+
+.rightHeading .dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+.rightHeading:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.address {
+    opacity: 0.8;
+}
+
+.header svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ====================================================================
+3. Product Card Section
+==================================================================== */
+
+/* == 3.1 Product Card Container == */
+.product-card-container {
+    display: flex;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    flex-direction: column;
+    gap: 2rem; /* Adds space between the product cards */
+    margin-top: 2rem;
+    background-color: #F9F9F9;
+}
+
+/* == 3.2 Individual Product Card == */
+.product-card {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 0.5rem;
+    gap: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    margin-top: 2rem;
+    width: 100%; /* Adjust to container width */
+}
+
+/* == 3.3 Product Image == */
+.product-image img {
+    width: 100px;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* == 3.4 Product Details == */
+.product-details {
+    flex: 1;
+    font-family: "Questrial", sans-serif;
+}
+
+.highlight {
+    color: #F35318;
+    font-weight: bold;
+}
+.gap-text {
+    margin: 0.8rem 0;
+}
+
+.product-company {
+    font-size: 0.8rem;
+    color: #686868;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+/* == 3.5 Price, Company, and Name Styling == */
+.product-price, .product-company, .product-name {
+    max-width: none; /* Allow full-width usage */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+
+.product-price {
+    display: flex;
+    align-items: baseline;
+    font-size: 1rem;
+}
+
+.product-price .currency {
+    font-size: 0.8rem;
+    margin-right: 0.2rem;
+}
+
+.amount {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* == 3.6 Quantity Actions == */
+.quantity-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.quantity-btn {
+    background-color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.quantity-value {
+    background-color: #F35318;
+    padding: 0.5rem 0.8rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* == 3.7 Product Icons == */
+.product-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.icon-link {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon-link img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ====================================================================
+4. Responsive Styles
+==================================================================== */
+
+/* == 4.1 Adjustments for Small Screens == */
+@media screen and (max-width: 390px) {
+    .product-card {
+        flex-wrap: wrap;
+        justify-content: center; /* Center contents horizontally */
+        text-align: center; /* Center text inside the product card */
+        width: 85%;
+    }
+
+    .product-details {
+        flex-basis: 100%;
+        order: 1;
+        text-align: center; /* Center text inside product details */
+    }
+
+    .product-price {
+        justify-content: center; /* Center-align price content */
+        display: flex; /* Ensure flex layout for aligning items */
+    }
+
+    .product-icons {
+        
+        display: flex;
+       
+        order: 2;
+    }
+
+    .quantity-actions {
+        margin: 0 auto; /* Center the quantity buttons */
+    }
+}
+@media screen and (min-width:390px) and (max-width:700px) {
+    .product-card {
+        width: 90%;
+    }
+}
+
+/* ====================================================================
+5. Coupon Section
+==================================================================== */
+
+/* == 5.1 Coupon Container == */
+.coupon-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 3rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.coupon-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.coupon-container button {
+    background-color: #F35318;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ====================================================================
+6. Summary Section
+==================================================================== */
+
+/* == 6.1 Summary Container == */
+.summary-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 2.5rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-family: "Cabin", sans-serif;
+}
+
+/* == 6.2 Summary Details == */
+.summary-details {
+    margin-bottom: 2px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.summary-item .highlight {
+    color: #000;
+    font-weight: 600;
+}
+
+.divider {
+    height: 2px;
+    background-color: #F35318;
+    margin: 15px 0;
+}
+
+/* == 6.3 Total Container == */
+.total-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* == 6.4 Payment Logos == */
+.payment-logos {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.payment-logos img {
+    height: 30px;
+}
+
+/* == 6.5 Gray Text == */
+.gray-text {
+    color: #666;
+    font-size: 0.75rem;
+}
+
+/* == 6.6 Responsive Summary Section == */
+@media (max-width: 768px) {
+    .coupon-container, .summary-container {
+        max-width: 90%;
+    }
+}
+
+/* ====================================================================
+7. Checkout Tab Section
+==================================================================== */
+
+/* == 7.1 Checkout Tab == */
+.checkout-tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F35318;
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    max-width: 600px;
+    margin: 1.5rem auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 7rem;
+}
+
+/* == 7.2 Left Section of Checkout Tab == */
+.checkout-tab .left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-family: "Cabin", sans-serif;
+    font-size: 0.9rem;
+}
+
+.checkout-tab .left .items {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.checkout-tab .left .total {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* == 7.3 Middle Section of Checkout Tab == */
+.checkout-tab .middle {
+    font-weight: 700;
+    text-align: center;
+    flex-grow: 1;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    margin-right: 2.5rem;
+}
+
+/* == 7.4 Right Section of Checkout Tab == */
+.checkout-tab .right {
+    background-color: #fff;
+    color: orange;
+    border-radius: 50%;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.checkout-tab .right svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* == 7.5 Responsive Checkout Tab == */
+@media (max-width: 768px) {
+    .checkout-tab {
+        align-items: center;
+        gap: 0.8rem;
+        width: 90%;
+    }
+
+    .checkout-tab .left, .checkout-tab .middle, .checkout-tab .right {
+        text-align: center;
+    }
+}
+/* ====================================================================
+8. Navigation Bar
+==================================================================== */
+
+/* == 8.1 Bottom Navigation Bar == */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.1rem 0;
+    background-color: #fff;
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    z-index: 1000; /* Keeps navigation above other elements */
+}
+
+/* == 8.2 Navigation Items == */
+.nav-item {
+    width: 60px; /* Fixed width for items */
+    height: 60px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* == 8.3 Navigation Links == */
+.nav-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333; /* Default text color */
+    font-family: "Questrial", sans-serif;
+    font-size: 0.8rem;
+    transition: color 0.3s, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* == 8.4 Navigation Icons == */
+.nav-item a img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0.2rem; /* Space between icon and text */
+    transition: transform 0.3s ease;
+}
+
+/* == 8.5 Hover Effects == */
+.nav-item:hover a img {
+    transform: scale(1.15); /* Slightly enlarge icons */
+}
+
+.nav-item:hover a span {
+    color: #F3510B; /* Orange color on hover */
+    transform: scale(1.1); /* Slightly enlarge text */
+}
+
+/* == 8.6 Active State == */
+.nav-item.active a img {
+    transform: scale(1.2); /* Larger icons for active items */
+}
+
+.nav-item.active a span {
+    color: #F3510B; /* Highlight active text in orange */
+}

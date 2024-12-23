@@ -1,0 +1,335 @@
+/* ==================================== */
+/*  - GLOBAL STYLES - Laying the Foundation (Lines 1–25) */
+/* ==================================== */
+
+/* ==================================== */
+/* 1 - PROFILE BANNER STYLES - Personalized & Welcoming (Lines 26–73) */
+/* ==================================== */
+
+/* ==================================== */
+/* 2 - CATEGORY GRID STYLES - Organized & Attractive (Lines 130–176) */
+/* ==================================== */
+
+/* ==================================== */
+/* 3 - OPTION BANNER STYLES - Highlighting Features (Lines 177–235) */
+/* ==================================== */
+
+/* ==================================== */
+/* 4 - FOOTER SECTION - Wrapping Up (Lines 236–244) */
+/* ==================================== */
+ 
+
+/* ==================================== */
+/* GLOBAL STYLES - Laying the Foundation */
+/* ==================================== */
+
+/* Remove underlines and ensure links inherit text color */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Base styling for the body: padding and background color */
+body {
+    padding-top: 1rem;
+    background-color: #F9F9F9; /* Set body background color */
+}
+
+/* Box sizing reset for consistent layout across elements */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* ==================================== */
+/* 1 - PROFILE BANNER STYLES    */
+/* ==================================== */
+
+/* --- Styling for the profile banner container --- */
+.profilebanner {
+    display: flex;
+    align-items: center;
+    background-color: #F76631; /* Vibrant banner background */
+    padding: 0.8rem; /* Reduce padding for compact look */
+    border-radius: 9px; /* Rounded corners for modern feel */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: auto; /* Center horizontally */
+    width: 97%; /* Shrink width slightly to leave space around */
+    max-width: 1000px; /* Maintain max width for larger screens */
+    color: #fff; /* White text for contrast */
+    margin-bottom: 2rem; /* Space below banner */
+}
+
+/* --- Circular profile icon inside the banner --- */
+.profile-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px; /* Size of the profile icon */
+    height: 55px;
+    border-radius: 50%; /* Fully rounded icon */
+    background-color: #FFF8F5; /* Light background for contrast */
+    font-family: 'Poppins', sans-serif; /* Font styling */
+    font-size: 1.2rem; /* Bold font for initials or icon */
+    font-weight: bold;
+    color: #494949; /* Neutral text color */
+    margin-right: 1rem; /* Space between icon and text */
+}
+
+/* --- Welcome text styling within the banner --- */
+.profilebannertxt h3, p {
+    font-family: "Poppins", sans-serif; /* Consistent font style */
+}
+.profilebannertxt p {
+    font-size: 0.85rem; /* Smaller size for secondary text */
+}
+
+/* --- Wrapper to push the edit button to the right --- */
+.button-wrapper {
+    margin-left: auto; /* Align button to the right */
+}
+
+/* --- Styling for the 'Edit Profile' button --- */
+.editprofile {
+    padding: 0.4rem 0.9rem; /* Button size */
+    font-size: 0.8rem; /* Compact text size */
+    background-color: #fff; /* White background for contrast */
+    color: #242424; /* Neutral button text color */
+    border: none; /* Remove border */
+    border-radius: 7px; /* Rounded edges for modern feel */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: "Cabin", sans-serif; /* Clean, simple font */
+}
+
+/* ==================================== */
+/*      2  - CATEGORY GRID STYLES     */
+/* ==================================== */
+
+/* --- Styling the grid layout for categories --- */
+.categ {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 0.6rem; /* Space between items */
+    border-radius: 5px; /* Rounded corners for smooth appearance */
+    margin: 1rem auto 0 auto; /* Minimal top margin, auto horizontal centering */
+    width: 95%; /* Adaptive width for responsiveness */
+    max-width: 1000px; /* Limit width for larger screens */
+}
+
+/* --- Styling the image inside category items --- */
+.categ .banneracc img {
+    width: 30px; /* Set consistent width */
+    height: 30px; /* Set consistent height */
+    object-fit: contain; /* Prevent distortion */
+    margin-bottom: 0.5rem; /* Space between image and text */
+}
+
+/* --- Styling individual category banners --- */
+.banneracc {
+    display: flex; /* Horizontal alignment for content */
+    align-items: center; /* Center content vertically */
+    background-color: #fff; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1rem; /* Inner padding for spacing */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: left; /* Left-align text content */
+}
+
+/* --- Styling the text content inside category banners --- */
+.text-content {
+    display: flex;
+    flex-direction: column; /* Stack heading and description vertically */
+    margin-left: 0.5rem; /* Add space between image and text */
+    color: #3D3D3D; /* Neutral text color */
+}
+
+/* --- Styling headings inside category banners --- */
+.banneracc h4 {
+    margin: 0; /* Remove default margin */
+    font-size: 1rem; /* Font size for category title */
+    font-family: "Cabin", sans-serif; /* Clean and modern font */
+    font-weight: 600; /* Semi-bold for emphasis */
+}
+
+/* --- Styling descriptions inside category banners --- */
+.banneracc p {
+    margin: 0.2rem 0 0; /* Space between heading and description */
+    font-size: 0.85rem; /* Slightly smaller font for description */
+    font-family: "Cabin", sans-serif; /* Matching font for consistency */
+    color: #666; /* Lighter text color for differentiation */
+}
+
+/* ==================================== */
+/*    3  -   OPTION BANNER STYLES         */
+/* ==================================== */
+
+/* --- Styling the grid layout for options --- */
+.optionbanner {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(1, 1fr); /* One item per row */
+    gap: 0.5rem; /* Space between items */
+    margin: 0 auto; /* Center the grid */
+    width: 95%; /* Adaptive width for responsiveness */
+    max-width: 1000px; /* Limit width for larger screens */
+    padding-top: 1rem; /* Space above the grid */
+}
+
+/* --- Remove padding below the last option banner --- */
+.optionbanner:last-child {
+    padding-bottom: 5rem; /* Extra spacing below */
+}
+
+/* --- Styling images inside option banners --- */
+.optionbanner img {
+    width: 24px; /* Set consistent icon size */
+    height: 24px; /* Set consistent icon size */
+    object-fit: contain; /* Prevent distortion */
+    margin-right: 1rem; /* Space between icon and text */
+}
+
+/* --- Styling the heading above option banners --- */
+.heading {
+    margin-top: 1rem; /* Space above heading */
+    margin-bottom: 0.8rem; /* Space below heading */
+    font-family: "Cabin", sans-serif; /* Matching font style */
+}
+
+/* --- Remove unnecessary margin from heading text --- */
+.heading h3 {
+    margin: 0; /* Remove default margins */
+}
+
+/* --- Styling individual option banners --- */
+.opbanner {
+    display: flex; /* Horizontal alignment */
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Push text and arrow to edges */
+    background-color: #fff; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 0.8rem; /* Inner padding for spacing */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: left; /* Align text to the left */
+    gap: 1rem; /* Space between elements */
+    position: relative; /* Enable positioning for arrow */
+}
+
+/* --- Prevent images from resizing in option banners --- */
+.opbanner img {
+    flex-shrink: 0; /* Maintain original size */
+    width: 24px; /* Set icon width */
+    height: 24px; /* Set icon height */
+    margin-right: 1rem; /* Space between image and text */
+}
+
+/* --- Styling text content inside option banners --- */
+.opbanner p {
+    flex-grow: 1; /* Allow text to take available space */
+    margin: 0; /* Remove default margin */
+    font-size: 1rem; /* Font size for text */
+    color: #333; /* Neutral text color */
+    font-family: "Questrial", sans-serif; /* Simple and modern font */
+    text-align: left; /* Keep text aligned to the left */
+}
+
+/* --- Adding a right arrow to option banners --- */
+.opbanner::after {
+    content: ''; /* Empty content for arrow */
+    display: inline-block; /* Ensure it takes space */
+    width: 6px; /* Arrow size */
+    height: 6px;
+    border-right: 2px solid #333; /* Create arrow with borders */
+    border-bottom: 2px solid #333; /* Create arrow with borders */
+    transform: rotate(315deg); /* Point arrow to the right */
+    transition: transform 0.3s ease; /* Smooth rotation */
+    position: absolute;
+    right: 1rem; /* Position arrow to the far right */
+}
+
+/* --- Rotate arrow down on hover --- */
+.opbanner:hover::after {
+    transform: rotate(405deg); /* Change arrow orientation */
+}
+
+/* --- Remove margin below the last option banner --- */
+.opbanner:last-child {
+    margin-bottom: 0; /* No margin below the last item */
+}
+
+/* ==================================== */
+/*         4 -  FOOTER SECTION             */
+/* ==================================== */
+
+/* --- Styling for copyright text --- */
+.copyright {
+    margin-top: 20px; /* Space above copyright text */
+    font-size: 0.8rem; /* Smaller font size */
+    text-align: center; /* Center align text */
+    padding-bottom: 5rem; /* Extra space below */
+    font-family: "Questrial", sans-serif; /* Simple, modern font */
+    color: #3D3D3D; /* Neutral text color */
+}
+/* ===================================================
+   5. BOTTOM NAVIGATION
+   =================================================== */
+
+/* Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.1rem 0;
+    background-color: #fff;
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    z-index: 1000; /* Keeps navigation above other elements */
+}
+
+/* Navigation Items */
+.nav-item {
+    width: 60px; /* Fixed width for items */
+    height: 60px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Navigation Links */
+.nav-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333; /* Default text color */
+    font-family: "Questrial", sans-serif;
+    font-size: 0.8rem;
+    transition: color 0.3s, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Navigation Icons */
+.nav-item a img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 0.2rem; /* Space between icon and text */
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effects */
+.nav-item:hover a img {
+    transform: scale(1.15); /* Slightly enlarge icons */
+}
+.nav-item:hover a span {
+    color: #F3510B; /* Orange color on hover */
+    transform: scale(1.1); /* Slightly enlarge text */
+}
+
+/* Active State */
+.nav-item.active a img {
+    transform: scale(1.2); /* Larger icons for active items */
+}
+.nav-item.active a span {
+    color: #F3510B; /* Highlight active text in orange */
+}
